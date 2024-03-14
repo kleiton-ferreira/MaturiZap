@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaturiZap</title>
+    <link rel="icon" href="Imagens/MaturiZap.png" type="image/x-icon">
+   
+    
+    <!-- Estilos CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            bottom: 0;
+            position:fixed;
+            width: 100%;
+        }
+
+        /* Estilos adicionais para a mensagem de confirmação */
+        #confirmacao {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MaturiZap</h1>
+        <h3>Conectando gerações experientes</h3>
+
+    </header>
+
+    <nav>
+        <a href="inicio.html">Tela Inicial</a>
+        <a href="tutoriais.html">Tutoriais</a>
+        <a href="videos.html">Vídeos</a>
+        <a href="sugestoes.html">Sugestões</a>
+    </nav>
+
+    <P></P>
+    <img src="Imagens/sugestao.png" alt="Ícone de lâmpada indicando sugestões" width="30" height="30">
+   
+    <h2>Deixe uma sugestão ou dúvida</h2>
+        
+    <form action="cadastra.php" method="post" id="formulario">
+
+        Nome: <input type="text" name="nome"/><br/>
+        Idade: <input type="text" name="idade"/><br/> 
+        E-mail: <input type="text" name="email"/> <br>
+        <input type="radio" name="Sexo" value="M" /> Sexo Masculino <br>
+        <input type="radio" name="Sexo" value="F" /> Sexo Feminino <br><br>
+        
+        Sugestão/Dúvida: <br>
+        <textarea name="sugestao"></textarea><br/>
+
+        <input type="submit" value="Enviar" />
+    </form>
+
+    <!-- Mensagem de confirmação -->
+    <div id="confirmacao">Mensagem enviada com sucesso!</div>
+
+    <footer>
+        <p><b>Autores: </b>Jonathan Góis / João Vitor / Kleiton Ferreira <br>
+        CESED - Centro de Ensino Superior e Desenvolvimento Ltda. <br>
+        &copy; 2024 Todos os direitos reservados <br>
+        CNPJ: 02.108.023/0001-40</p>
+    </footer>
+
+    <!-- Script JavaScript para exibir a mensagem de confirmação -->
+    <script>
+        document.getElementById("formulario").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita o envio do formulário
+            document.getElementById("confirmacao").style.display = "block"; // Exibe a mensagem de confirmação
+        });
+    </script>
+</body>
+</html>
